@@ -1,1 +1,1 @@
-Program for calculating Uber Eats pay per delivery from drivers in Seattle,WA. 
+Program for calculating UberX pay per delivery from drivers in Seattle,WA. 
