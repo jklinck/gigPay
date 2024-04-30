@@ -14,18 +14,17 @@ void pay(){
 	double seconds;
 	double miles;
 	double totalPay;
-	int minutesResult;
+	double minutesResult;
 
-	do{
-		printf("\nEnter minutes: ");
-		minutesResult = scanf("%lf", &minutes);
-	}while(minutesResult < 1);
+	printf("\nEnter minutes: ");
+	minutesResult = scanf("%lf", &minutes);
+
 
 	printf("Enter seconds: ");
 	int secondsResult = scanf("%lf", &seconds);
 
 	printf("Enter miles: ");
-	int milesResult = scanf("%lf", &miles);
+	double milesResult = scanf("%lf", &miles);
 
 
 	totalPay = ((seconds / 60) + minutes) * 0.66 + miles * 1.55;
