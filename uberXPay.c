@@ -17,13 +17,24 @@ void pay(){
 
 	printf("\nEnter minutes: ");
 	scanf("%lf", &minutes);
-
+	while(minutes < 1){
+		printf("Please enter a positive number for miles: ");
+		scanf("%lf", &minutes);
+	}
 
 	printf("Enter seconds: ");
 	scanf("%lf", &seconds);
+	while(minutes < 1){
+		printf("Please enter a positive number for miles: ");
+		scanf("%lf", &minutes);
+	}
 
 	printf("Enter miles: ");
 	scanf("%lf", &miles);
+	while(minutes < 1){
+		printf("Please enter a positive number for miles: ");
+		scanf("%lf", &minutes);
+	}
 
 
 	totalPay = ((seconds / 60) + minutes) * 0.66 + miles * 1.55;
