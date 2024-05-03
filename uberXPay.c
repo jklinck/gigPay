@@ -3,33 +3,34 @@
 // a program for calculating uberX and uberEats pay in Seattle,WA, the user is prompted 
 // on which type of gig it is (ubeX or uberEats)
 
-void uberXPay();
-
-void uberEatsPay();
+void pay(double minutesPay, double milesPay);
 
 int main(){
 
 	int gigType; 
-	printf("Would you like to calculate the pay for a uberX ride or an uberEats delivery? 
-	select 1 for uberX ride or 2 for an uberEats delivery");
-	scanf("%d", gigType);
+	printf("Would you like to calculate the pay for a uberX ride or an uberEats delivery? Select 1 for uberX ride or 2 for an uberEats delivery:  ");
+	scanf("%d", &gigType);
 
-	while(gigType !=1 || gigType !=2){
-		printf("Would you like to calculate the pay for a uberX ride or an uberEats delivery? 
-		select 1 for uberX ride or 2 for an uberEats delivery");
-		scanf("%d", gigType);
+	while(gigType != 1 && gigType != 2){
+		printf("Invalid input!\n");
+		// clear the input buffer
+		while (getchar() != '\n');
+		printf("Would you like to calculate the pay for a uberX ride or an uberEats delivery? Select 1 for uberX ride or 2 for an uberEats delivery:  ");
+		scanf("%d", &gigType);
 	}
+
+
 	if(gigType == 1){
-		uberXPay();
+		pay(0.66, 1.55);
 	}
 	else if(gigType == 2){
-		uberEatsPay();
+		pay(0.44, 0.74);
 	}
 
 	return 0;
 }
 
-void uberXPay(){
+void pay(double minutesPay, double milesPay){
 	double minutes;
 	double seconds;
 	double miles;
@@ -58,10 +59,14 @@ void uberXPay(){
 		while (getchar() != '\n');
 		printf("Enter miles: ");
 	}
-	
 
-
-	totalPay = ((seconds / 60) + minutes) * 0.66 + miles * 1.55;
+	totalPay = ((seconds / 60) + minutes) * minutesPay + miles * milesPay;
 
 	printf("Total pay for this ride is: $%.2f\n\n", totalPay);
 }
+
+
+
+
+
+
