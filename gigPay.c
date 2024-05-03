@@ -1,13 +1,12 @@
 #include <stdio.h>
 
-// a program for calculating uberX and uberEats pay in Seattle,WA, the user is prompted 
-// on which type of gig it is (ubeX or uberEats)
+// a program for calculating gig ride and gig delivery pay in Seattle,WA, the user is prompted 
+// on which type of gig it is (ride or delivery)
 
 void pay(double minutesPay, double milesPay);
 
 int main(){
 
-	int x;
 	int gigType; 
 	printf("Would you like to calculate the pay for a uberX ride or an uberEats delivery? Select 1 for uberX ride or 2 for an uberEats delivery:  ");
 	scanf("%d", &gigType);
