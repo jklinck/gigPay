@@ -7,6 +7,7 @@ void pay(double minutesPay, double milesPay);
 
 int main(){
 
+	int x;
 	int gigType; 
 	printf("Would you like to calculate the pay for a uberX ride or an uberEats delivery? Select 1 for uberX ride or 2 for an uberEats delivery:  ");
 	scanf("%d", &gigType);
