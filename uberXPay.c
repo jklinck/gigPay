@@ -1,15 +1,35 @@
 #include <stdio.h>
 
-void pay();
+// a program for calculating uberX and uberEats pay in Seattle,WA, the user is prompted 
+// on which type of gig it is (ubeX or uberEats)
+
+void uberXPay();
+
+void uberEatsPay();
 
 int main(){
 
-	pay();
+	int gigType; 
+	printf("Would you like to calculate the pay for a uberX ride or an uberEats delivery? 
+	select 1 for uberX ride or 2 for an uberEats delivery");
+	scanf("%d", gigType);
+
+	while(gigType !=1 || gigType !=2){
+		printf("Would you like to calculate the pay for a uberX ride or an uberEats delivery? 
+		select 1 for uberX ride or 2 for an uberEats delivery");
+		scanf("%d", gigType);
+	}
+	if(gigType == 1){
+		uberXPay();
+	}
+	else if(gigType == 2){
+		uberEatsPay();
+	}
 
 	return 0;
 }
 
-void pay(){
+void uberXPay(){
 	double minutes;
 	double seconds;
 	double miles;
