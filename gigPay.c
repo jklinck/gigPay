@@ -8,14 +8,14 @@ void pay(double minutesPay, double milesPay);
 int main(){
 
 	int gigType; 
-	printf("Would you like to calculate the pay for a gig ride or a gig delivery? Select 1 for uberX ride or 2 for an uberEats delivery:  ");
+	printf("Would you like to calculate the pay for a gig ride or a gig delivery? Select 1 for a gig ride or 2 for a gig delivery:  ");
 	scanf("%d", &gigType);
 
 	while(gigType != 1 && gigType != 2){
 		printf("Invalid input!\n");
 		// clear the input buffer
 		while (getchar() != '\n');
-		printf("Would you like to calculate the pay for a gig ride or a gig delivery? Select 1 for uberX ride or 2 for an uberEats delivery:  ");
+		printf("Would you like to calculate the pay for a gig ride or a gig delivery? Select 1 for a gig ride or 2 for a gig delivery:  ");
 		scanf("%d", &gigType);
 	}
 
