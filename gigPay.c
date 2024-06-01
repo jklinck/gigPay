@@ -3,7 +3,7 @@
 // a program for calculating gig ride and gig delivery pay in Seattle,WA, the user is prompted 
 // on which type of gig it is (ride or delivery)
 
-void pay(double minutesPay, double milesPay);
+void pay(double minutesPay, double milesPay, int gigType);
 
 int main(){
 
@@ -21,20 +21,21 @@ int main(){
 
 
 	if(gigType == 1){
-		pay(0.66, 1.55);
+		pay(0.66, 1.55, 1);
 	}
 	else if(gigType == 2){
-		pay(0.44, 0.74);
+		pay(0.44, 0.74, 2);
 	}
 
 	return 0;
 }
 
-void pay(double minutesPay, double milesPay){
+void pay(double minutesPay, double milesPay, int gigType){
 	double minutes;
 	double seconds;
 	double miles;
 	double totalPay;
+	char type[10] = "";
 
 	printf("\nEnter minutes: ");
 	while (scanf("%lf", &minutes) != 1 || minutes < 1){
@@ -62,7 +63,14 @@ void pay(double minutesPay, double milesPay){
 
 	totalPay = ((seconds / 60) + minutes) * minutesPay + miles * milesPay;
 
-	printf("Total pay for this ride is: $%.2f\n\n", totalPay);
+	if(gigType == 1){
+		sprintf(type, "ride");
+	}
+	else{
+		sprintf(type, "delivery");
+	}
+
+	printf("Total pay for this %s is: $%.2f\n\n", type, totalPay);
 }
 
 
