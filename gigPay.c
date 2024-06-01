@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // a program for calculating gig ride and gig delivery pay in Seattle,WA, the user is prompted 
 // on which type of gig it is (ride or delivery)
@@ -64,10 +65,10 @@ void pay(double minutesPay, double milesPay, int gigType){
 	totalPay = ((seconds / 60) + minutes) * minutesPay + miles * milesPay;
 
 	if(gigType == 1){
-		sprintf(type, "ride");
+		strcpy(type, "ride");
 	}
 	else{
-		sprintf(type, "delivery");
+		strcpy(type, "delivery");
 	}
 
 	printf("Total pay for this %s is: $%.2f\n\n", type, totalPay);
